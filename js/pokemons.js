@@ -3474,35 +3474,3 @@ var pokemons = [
     weaknesses: ['Bug', 'Ghost', 'Dark'],
   },
 ];
-var elWrapper = document.querySelector('.wrapper');
-
-for (element of pokemons) {
-  var elInner = document.createElement('div');
-  var elImg = document.createElement('img');
-  var elId = document.createElement('p');
-  var elName = document.createElement('p');
-  var elType = document.createElement('p');
-  var elHeight = document.createElement('p');
-  var elWeight = document.createElement('p');
-
-  elInner.classList = "inner";
-  elImg.classList = "img";
-  elImg.src = element.img;
-  elImg.alt = "Pokemon images";
-  elId.classList = "id"
-  elId.textContent = `ID: ${element.id}`;
-  elName.classList = "name"
-  elName.textContent = `Name: ${element.name}`;
-  elType.textContent = `Type: ${element.type}`;
-  elHeight.textContent = `Height: ${element.height}`;
-  elWeight.textContent = `Weight: ${element.weight}`;
-
-  elInner.appendChild(elImg);
-  elInner.appendChild(elId);
-  elInner.appendChild(elName);
-  elInner.appendChild(elType);
-  elInner.appendChild(elHeight);
-  elInner.appendChild(elWeight);
-  elWrapper.appendChild(elInner);
-
-}
